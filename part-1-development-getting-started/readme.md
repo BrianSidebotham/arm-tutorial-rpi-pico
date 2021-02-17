@@ -49,7 +49,9 @@ The bootloader will write the U2F file to the PICO's Flash and then it will disc
 
 Wire the picoprobe and PICO board under test as in the following diagram and photo.
 
-![PICO_SVD](/images/part-1-pico-svd.jpg)
+![PICO_SVD_CONNS](/images/pico-svd-connections.png)
+
+![PICO_SVD](/images/pico-svd-debugging-pico.jpg)
 
 ### Test the Picoprobe
 

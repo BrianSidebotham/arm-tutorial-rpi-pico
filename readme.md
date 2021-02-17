@@ -6,6 +6,10 @@ Comprehensive getting started information is [available](https://datasheets.rasp
 
 The RPi foundation documentation is based on the development host (where you develop code) being a raspberry pi. In this tutorial we develop on standard desktop. You'll need a JTAG device that's compatible with OpenOCD in order to be able to develop properly on your desktop however. The Raspberry Pi guide above using GPIO as the JTAG connection for debugging.
 
+If you're impatient, skip to the Quickstart section below, but **NOTE:** that the quickstart won't get you a debugger up and running. In order to start debugging code on a PICO, continue to [part-1](part-1-development-getting-started/readme.md).
+
+- [Part 1 - Getting Started with Development](part-1-development-getting-started/readme.md)
+
 ## Quickstart
 
 Getting started quickly. Here, on Fedora 33.
@@ -40,7 +44,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 ### Get the SDK
 
-You'll also need the RPI, straight from the RPI getting started... 
+You'll also need the RPI, straight from the RPI getting started...
 
 ```
 git clone -b master https://github.com/raspberrypi/pico-sdk.git
