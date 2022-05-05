@@ -30,15 +30,18 @@ Fedora 33 example:
 $ git clone https://github.com/raspberrypi/openocd.git --branch picoprobe --depth=1
 $ cd openocd
 $ ./bootstrap
-$ ./configure --enable-picoprobe
-$ make -j$(nproc)
+$ ./configure --enable-picoprobe --disable-werror
+$ make -j
 $ sudo make install
 ```
 
-Grab the Picoprobe U2F file which is the JTAG interface software a PICO needs to run in order to provide a JTAG interface for debugging the second PICO:
+Next up, we've got to build the picoprobe project which provides the JTAG interface that we will use to debug our actual target.
 
 ```shell
-$ wget https://www.raspberrypi.org/documentation/pico/getting-started/static/fec949af3d02572823529a1b8c1140a7/picoprobe.uf2
+$ export PICO_SDK_PATH=/path/to/sdk
+$ git clone https://github.com/raspberrypi/picoprobe.git
+$ cd picoprobe && mkdir build && cd build
+$ cmake ..
 ```
 
 Plug a PICO in to your computer whilst holding down the boot switch, and copy `picoprobe.u2f` to the drive that it creates.
